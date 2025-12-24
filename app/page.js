@@ -52,8 +52,26 @@ export default function Home() {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <button style={{ marginTop: 10 }}>
-    Commander sur WhatsApp
+  <a
+  href={`https://wa.me/213656998012?text=${encodeURIComponent(
+    `Bonjour, je souhaite commander ${product.name} au prix de ${product.price} DA`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "inline-block",
+    marginTop: 10,
+    padding: "8px 14px",
+    backgroundColor: "#555",
+    color: "#fff",
+    borderRadius: "6px",
+    textDecoration: "none",
+    fontWeight: "bold"
+  }}
+>
+  Commander
+</a>
+    
   <a
   href={`https://wa.me/213656998012?text=${encodeURIComponent(
     `Bonjour, je souhaite commander ${product.name} au prix de ${product.price} DA`
