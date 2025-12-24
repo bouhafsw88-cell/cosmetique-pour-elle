@@ -46,7 +46,7 @@ export default function Home() {
   <button style={{ marginTop: 10 }}>
     Commander sur WhatsApp
   <a
-  href={`https://wa.me/213656998012?text=${encodeURIComponent(
+  href={`https://wa.me/213669980126?text=${encodeURIComponent(
     `Bonjour, je souhaite commander ${product.name} au prix de ${product.price}`
   )}`}
   target="_blank"
