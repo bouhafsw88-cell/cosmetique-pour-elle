@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
   const products = [
     {
@@ -39,7 +41,11 @@ export default function Home() {
 
           <a
             href={`https://wa.me/213669980126?text=${encodeURIComponent(
-              `Bonjour, je souhaite commander ${product.name} au prix de ${product.price} DA`
+              "Bonjour, je souhaite commander " +
+                product.name +
+                " au prix de " +
+                product.price +
+                " DA"
             )}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -60,4 +66,4 @@ export default function Home() {
       ))}
     </main>
   );
-}
+              }
