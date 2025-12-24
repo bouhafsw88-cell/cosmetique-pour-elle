@@ -36,8 +36,18 @@ export default function Home() {
             <p>{product.description}</p>
             <strong>{product.price}</strong>
             <br />
-            <button style={{ marginTop: 10 }}>
-              Commander
+            
+<a
+  href={`https://wa.me/213669980126?text=${encodeURIComponent(
+    `Bonjour, je souhaite commander ${product.name} au prix de ${product.price}`
+  )}`}
+  target="_blank"
+>
+  <button style={{ marginTop: 10 }}>
+    Commander sur WhatsApp
+  </button>
+</a>
+  
             </button>
           </div>
         ))}
