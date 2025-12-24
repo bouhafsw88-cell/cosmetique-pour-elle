@@ -40,13 +40,16 @@ export default function Home() {
           <br />
 
           <a
-            href={`https://wa.me/213669980126?text=${encodeURIComponent(
-              "Bonjour, je souhaite commander " +
-                product.name +
-                " au prix de " +
-                product.price +
-                " DA"
-            )}`}
+            href={
+              "https://wa.me/213669980126?text=" +
+              encodeURIComponent(
+                "Bonjour, je souhaite commander " +
+                  product.name +
+                  " au prix de " +
+                  product.price +
+                  " DA"
+              )
+            }
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -66,4 +69,4 @@ export default function Home() {
       ))}
     </main>
   );
-              }
+}
