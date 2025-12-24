@@ -2,18 +2,18 @@ export default function Home() {
   const products = [
     {
       name: "NIVEA Crème Hydratante",
-      price: "2900 DA",
       description: "Hydratation intense pour tous types de peau",
+      price: 2900,
     },
     {
       name: "NIVEA Lait Corps",
-      price: "3200 DA",
       description: "Peau douce et nourrie toute la journée",
+      price: 3200,
     },
     {
       name: "NIVEA Gel Douche",
-      price: "1800 DA",
       description: "Fraîcheur et douceur au quotidien",
+      price: 1800,
     },
   ];
 
@@ -22,74 +22,42 @@ export default function Home() {
       <h1>Cosmétique Pour Elle 💄</h1>
       <p>Produits NIVEA authentiques – Paiement à la livraison</p>
 
-      <div style={{ display: "grid", gap: 20, marginTop: 30 }}>
-        {products.map((product, index) => (
-          <div
-            key={index}
+      {products.map((product, index) => (
+        <div
+          key={index}
+          style={{
+            border: "1px solid #333",
+            borderRadius: 8,
+            padding: 15,
+            marginTop: 20,
+          }}
+        >
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+          <strong>{product.price} DA</strong>
+          <br />
+
+          <a
+            href={`https://wa.me/213656998012?text=${encodeURIComponent(
+              `Bonjour, je souhaite commander ${product.name} au prix de ${product.price} DA`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              border: "1px solid #ddd",
-              padding: 15,
-              borderRadius: 8,
+              display: "inline-block",
+              marginTop: 10,
+              padding: "8px 14px",
+              backgroundColor: "#555",
+              color: "#fff",
+              borderRadius: "6px",
+              textDecoration: "none",
+              fontWeight: "bold",
             }}
           >
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <strong>{product.price}</strong>
-            <br />
-            
-<a
-  href={`https://wa.me/213669980126?text=${encodeURIComponent(
-    `Bonjour, je souhaite commander ${product.name} au prix de ${product.price}`
-  )}`}
-  target="_blank"
->
-  <button style={{ marginTop: 10 }}>
-    Commander sur WhatsApp
-  <a
-  href={`https://wa.me/213669980126?text=${encodeURIComponent(
-    `Bonjour, je souhaite commander ${product.name} au prix de ${product.price}`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <a
-  href={`https://wa.me/213656998012?text=${encodeURIComponent(
-    `Bonjour, je souhaite commander ${product.name} au prix de ${product.price} DA`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display: "inline-block",
-    marginTop: 10,
-    padding: "8px 14px",
-    backgroundColor: "#555",
-    color: "#fff",
-    borderRadius: "6px",
-    textDecoration: "none",
-    fontWeight: "bold"
-  }}
->
-  Commander
-</a>
-    
-  <a
-  href={`https://wa.me/213656998012?text=${encodeURIComponent(
-    `Bonjour, je souhaite commander ${product.name} au prix de ${product.price} DA`
-  )}`}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button>
-    Commander
-  </button>
-</a>
-
-
-  
-            
-          </div>
-        ))}
-      </div>
+            Commander
+          </a>
+        </div>
+      ))}
     </main>
   );
 }
