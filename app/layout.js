@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Cosmétique Pour Elle",
+  title: "Cosmicare ",
   description: "Produits NIVEA - Paiement à la livraison",
 };
 
